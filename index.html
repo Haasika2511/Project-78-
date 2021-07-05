@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            Project C78
+        </title>
+    </head>
+    <body>
+        <center style="margin-top: 40px;">
+            <h1>
+                My Family Book
+            </h1>
+
+            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" style="width: 30%;" id="family_member_image">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update()">Next</button>
+        </center>
+    </body>
+    <script>
+        var i = 0;
+        var images = ["https://i.postimg.cc/MKdhy06Z/family.jpg","https://i.postimg.cc/L6HcYQM0/grand-father.png", "https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
+        var names =["Family book","N.Audiseshiah","Dr.N.Sreekanth Naidu","N.Kovid Naidu", "N.Haasika Naidu","N.Sailaja Naidu"];
+
+        function update(){
+            i++;
+            var num_of_members =5
+            if (i> num_of_members )
+            {i=0; }
+            var updated_images=images[i];
+            var updated_names=names[i];
+            document.getElementById("family_member_image")=updated_images;
+            document.getElementById("family_member_name")=updated_names;
+         }
+         
+    </script>
+</html>
